@@ -25,8 +25,6 @@ from sliding_window import sliding_window
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # Define Loading Data Method
-
-
 def load_dataset(filename):
     """
     Function to load dataset
@@ -44,9 +42,7 @@ def load_dataset(filename):
     Notice:
         Need use `pickle(python3)` or`cpicckle(python2)` module to load and read dataset.
 
-
     """
-
     f = open(filename, 'rb')
     data = cp.load(f)
     f.close()
@@ -73,7 +69,7 @@ def load_dataset(filename):
 print("Loading data...")
 # X_train, y_train, X_test, y_test = load_dataset('DeepConvLSTM/data/gestures_wearable_ambient.data')
 X_train, y_train, X_test, y_test = load_dataset(
-    '/Users/chentailin/sharedfolder/Human-Activity-Recognition-CodeHub/opportinity-dataset/DeepConvLSTM/data/gestures_wearable_ambient.data')
+    '/Users/chentailin/Dropbox/Dataset/Opportunity/wearable_113_ambient_40_gestures_new.data')
 # /Users/chentailin/sharedfolder/Human-Activity-Recognition-CodeHub/opportinity-dataset/DeepConvLSTM/data/gestures_wearable_ambient.data
 
 X_train_origin = X_train.copy()
@@ -81,44 +77,16 @@ y_train_origin = y_train.copy()
 X_test_origin, y_test_origin = X_test.copy(), y_test.copy()
 
 print("Successfully")
-
 print("---" * 20)
-
-# Normalization the Raw data
-
-
-def normalization_x_y(x, y):
-    """
-    Stack x and y, then do normalization
-    Then return DataFrame x and y
-    """
-    print("Data normalizing...")
-    data = np.vstack((x, y))
-    df = pd.DataFrame(data)
-    df = (df - df.min()) / (df.max() - df.min())
-
-    data_x = df.iloc[:557963, ]
-    data_y = df.iloc[557963:, ]
-
-    data_x = np.array(data_x)
-    data_y = np.array(data_y)
-
-    print("Data normalized...")
-    return data_x, data_y
-
-
-# Normalization the whole dataset
-X_train_nor, X_test_nor = normalization_x_y(X_train, X_test)
-
 
 # split the wearable sensor data and ambient sensor data
 print("---" * 20)
 print("Spliting the data into F & A... ")
-X_train_F = X_train_nor[:, :113]
-X_train_A = X_train_nor[:, 113:]
+X_train_F = X_train[:, :113]
+X_train_A = X_train[:, 113:]
 
-X_test_F = X_test_nor[:, :113]
-X_test_A = X_test_nor[:, 113:]
+X_test_F = X_test[:, :113]
+X_test_A = X_test[:, 113:]
 
 # More clearly split
 F_train = X_train_F
@@ -134,6 +102,7 @@ print("{0} actual activities and 1 NaN activity,\nTotal 18 Classes".format(y_tra
 # Opportunity num_classes = 18
 num_classes = 18
 
+print("Now raw data are prepared as followed(normalized)......")
 print("F_train shape is ", F_train.shape)
 print("F_test shape is ", F_test.shape)
 
@@ -146,88 +115,28 @@ print("y_test shape is ", y_test.shape)
 
 print("---" * 20)
 
-print("Opperating sliding window...")
-"""
-Define Sliding Window
-"""
-SLIDING_WINDOW_LENGTH = 24
-SLIDING_WINDOW_STEP = 12
+# Prepare the dataset
+win_length = 24 # 2. imgaes are 28*28 you need to go into sequence. So 28 chunks of 28 pixels
+sliding_step = 24
+dim = 113
 
-# from sliding_window import sliding_window
-# ?sliding_window
-
-# assert NB_SENSOR_CHANNELS == X_train.shape[1]
+def opp_sliding_window(data,win_len,sliding_step):
+    return sliding_window(data,win_len,sliding_step)
 
 
-def opp_sliding_window(data_x, data_a, data_y, ws, ss):
-    """
-   Parameters: (F_train,A_train,y_train,window_size,step_size)
-
-    """
-    data_x = sliding_window(a=data_x, ws=(
-        ws, data_x.shape[1]), ss=(ss, 1), flatten=False)
-#     data_x = sliding_window(data_x,ws,ss)
-    data_a = sliding_window(a=data_a, ws=(
-        ws, data_a.shape[1]), ss=(ss, 1), flatten=False)
-    data_y = np.asarray([[i[-1]]
-                         for i in sliding_window(data_y, ws, ss, flatten=False)])
-    return data_x.reshape(-1, ws, data_x.shape[3]).astype(np.float32), data_a.reshape(-1, ws, data_a.shape[3]).astype(np.float32), data_y.reshape(-1).astype(np.uint8)
-#     return data_x.astype(np.float32), data_y.flatten().astype(np.uint8)
 
 
-F_train0, A_train0, y_train0 = opp_sliding_window(
-    F_train, A_train, y_train, SLIDING_WINDOW_LENGTH, SLIDING_WINDOW_STEP)
-print(" ..after sliding window (training):\n inputs : (wearable sensor data) F_train0{0} , (ambient sensor data) A_train0{1}, targets(label) y_train0 {2}".format(
-    F_train0.shape, A_train0.shape, y_train0.shape))
-
-F_test0, A_test0, y_test0 = opp_sliding_window(
-    F_test, A_test, y_test, SLIDING_WINDOW_LENGTH, SLIDING_WINDOW_STEP)
-print(" ..after sliding window (testing):\n inputs : (wearable sensor data) F_test0{0} , (ambient sensor data) A_test0{1}, targets(label) y_test0 {2}".format(
-    F_test0.shape, A_test0.shape, y_test0.shape))
-
-print("Successfully")
-print("---" * 20)
 
 
-print("Changing targets shape... (One-Hot Encoder for cross-entropy loss ) ")
-y_train1 = to_categorical(y=y_train0, num_classes=num_classes)
-y_test1 = to_categorical(y=y_test0, num_classes=num_classes)
-print("Before transforming: y_train0 shape {0}, y_test0 shape {2} \nAfter transforming: y_train1 shape {1},y_test1 shape {3}".format(
-    y_train0.shape, y_train1.shape, y_test0.shape, y_test1.shape))
-
-print("Successfully")
-
-print("---" * 20)
-X_train = np.reshape(
-    F_train0, (F_train0.shape[0], F_train0.shape[1], F_train0.shape[2], 1))  # reshape末尾增加1维
-X_valid = np.reshape(
-    F_test0, (F_test0.shape[0], F_test0.shape[1], F_test0.shape[2], 1))
-y_train = y_train1
-y_valid = y_test1
 
 
-print("X_train shape", X_train.shape)
-print("X_valid shape", X_valid.shape)
-print('y_train.shape' + str(y_train.shape))
-print('y_train.shape' + str(y_train.shape))
 
-print("Reshape the X_train and X_valid for CNN input")
-X_train_cnn = np.swapaxes(X_train, 1, 2)  # 就是将第三个维度和第二个维度交换
-X_valid_cnn = np.swapaxes(X_valid, 1, 2)
-
-print("X_train_cnn shape", X_train_cnn.shape)
-print("X_valid_cnn shape", X_valid_cnn.shape)
-print('X_train.shape' + str(y_train.shape))
-print('y_train.shape' + str(y_train.shape))
-
-
+# Define the model
 num_epochs = 10
 
 n_classes = 18
 batch_size = 128
 
-win_length = 24  # 2. imgaes are 28*28 you need to go into sequence. So 28 chunks of 28 pixels
-dim = 113
 
 rnn_size = 64  # num_hidden_lstm units number
 
