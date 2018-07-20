@@ -61,8 +61,8 @@ def load_dataset(filename):
 
 print("--- Loading data...\n","Data already normalized...")
 
-# X_train, y_train, X_test, y_test = load_dataset('C:/Users/41762/Dropbox/Dataset/Opportunity/wearable_113_ambient_40_gestures_new.data')
-X_train, y_train, X_test, y_test = load_dataset('/Users/chentailin/Dropbox/Dataset/Opportunity/wearable_113_ambient_40_gestures_new.data')
+X_train, y_train, X_test, y_test = load_dataset('C:/Users/41762/Dropbox/Dataset/Opportunity/wearable_113_ambient_40_gestures_new.data')
+# X_train, y_train, X_test, y_test = load_dataset('/Users/chentailin/Dropbox/Dataset/Opportunity/wearable_113_ambient_40_gestures_new.data')
 
 print("--- Successfully")
 
@@ -131,7 +131,7 @@ def lstm_net(x):
     :param n_classes:
     :return:
     '''
-    weights = {'weights': tf.Variable(tf.random_normal([rnn_size,n_classes]))
+    weights = {'weights': tf.Variable(tf.random_normal([WINDOW_LENGTH,rnn_size,n_classes]))
 
     }
     biases = {'biases':tf.Variable(tf.random_normal([n_classes]))
@@ -142,7 +142,7 @@ def lstm_net(x):
     outputs, states = rnn.static_rnn(lstm_cell, inputs=inputs ,dtype=tf.float32 )
 
     output = tf.matmul(outputs,weights['weights']) + biases['biases']
-
+    # output = tf.transpose(output,(1,0,2))
     return output
 
 def train_network(X_train,y_train,X_valid,y_valid,learning_rate = 0.001,num_epochs = 10, batch_size = 128, print_cost=True ):
@@ -165,7 +165,7 @@ def train_network(X_train,y_train,X_valid,y_valid,learning_rate = 0.001,num_epoc
 
     # Create placeholders for X,y and keep_prob
     x = tf.placeholder(dtype=tf.float32, shape=[None, win_len, dim])
-    y = tf.placeholder(dtype=tf.float32, shape=[None, num_classes])
+    y = tf.placeholder(dtype=tf.float32, shape=[None, win_len,num_classes])
 
     # initialize parameters
     init = tf.global_variables_initializer()
@@ -173,33 +173,35 @@ def train_network(X_train,y_train,X_valid,y_valid,learning_rate = 0.001,num_epoc
     loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(
         logits=prediction, labels=y))  # loss
     optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
-    correct = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
+    correct = tf.equal(tf.argmax(prediction, 0), tf.argmax(y, 1))
     accuracy = tf.reduce_mean(tf.cast(correct, dtype=tf.float32))
 
     # Run Session
     with tf.Session() as sess:
-        sess.run(init)
+        sess.run(tf.global_variables_initializer())
 
         for epoch in range(num_epochs):
-            if epoch % 3 ==0:
+            if epoch % 1 ==0:
                 epoch_loss =0
                 minibatches = mini_batch(X_train,y_train, batch_size)
                 for minibatch in minibatches:
                     (minibatch_x,minibatch_y) = minibatch
 
-                    _, c = sess.run([optimizer,loss],feed_dict={x:minibatch_x, y:minibatch_y})
+                    pre,_, c = sess.run([prediction, optimizer,loss],feed_dict={x:minibatch_x, y:minibatch_y})
                     epoch_loss +=c
+                    print(pre)
 
                 print('Epoch', epoch, 'completed out of',
                       num_epochs, 'Epoch loss', (epoch_loss / batch_size))
                 print('Epoch Accuracy:', accuracy.eval({x: X_valid, y: y_valid}))
 
         print("Optimization Finished!")
+        return pre
 
 batch_size = 128
 
 
-train_network(F_train,y_train_1hot,F_test,y_test_1hot)
+pre,y = train_network(F_train,y_train_1hot,F_test,y_test_1hot,num_epochs=20)
 
 
 

@@ -24,12 +24,12 @@ def permute(x, permute_list):
 
 def mini_batch(x, y, batch_size):
     mini_batches = []
-    num_bathches = int(np.floor(x.shape[0] / batch_size))
+    num_bathches = int(x.shape[0] // batch_size)
     for batch_index in range(num_bathches):
         mini_batch_x = x[batch_index *
-                         batch_size:((batch_index * batch_size) + batch_size), :, :]
+                         batch_size:((batch_index * batch_size) + batch_size)]
         mini_batch_y = y[batch_index *
-                         batch_size:((batch_index * batch_size) + batch_size), :, :]
+                         batch_size:((batch_index * batch_size) + batch_size)]
         mini_batch = (mini_batch_x, mini_batch_y)
         mini_batches.append(mini_batch)
     return mini_batches
@@ -50,7 +50,7 @@ def create_placeholders(dim, win_len, num_classes):
 
     Now the x is (46495,113,24,1)
     """
-    x = tf.placeholder('float32', shape=[None, dim, win_len, n_C0])
+    x = tf.placeholder('float32', shape=[None, dim, win_len])
     y = tf.placeholder('float32', shape=[None, num_classes])
 
     return x, y

@@ -15,7 +15,7 @@ def sliding_window(data,win_len,sliding_step,flatten=None):
         n_samples =  data.shape[0]
         dim=1
         n_windows = n_samples//sliding_step
-        shape = (n_windows,sliding_step,)
+        shape = (n_windows,win_len,)
         strides = data.itemsize*np.array([sliding_step*dim,dim,])
         result = np.lib.stride_tricks.as_strided(data, shape=shape, strides=strides)
         # result = np.expand_dims(result,axis=2)
@@ -25,7 +25,7 @@ def sliding_window(data,win_len,sliding_step,flatten=None):
     if len(data.shape)!=1:
         n_samples,dim = data.shape
         n_windows = n_samples // sliding_step
-        shape = (n_windows,sliding_step,dim)
+        shape = (n_windows,win_len,dim)
         strides = data.itemsize * np.array([sliding_step * dim,dim,1])
         result = np.lib.stride_tricks.as_strided(data, shape=shape, strides=strides)
         print("Shape : {0} ---> {1} ".format(data.shape, result.shape))

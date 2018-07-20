@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc12a9f9-3cec-4418-a084-16208c86e02b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Codes/.ipynb_checkpoints/FrameWise-ConvLstm-TensorFlow-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Codes/FrameWise-ConvLstm-TensorFlow.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Codes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Codes/lstm_net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Codes/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/ConvLstm-TensorFlow-FrameWise.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/mini_batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/mini_batch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/samplewise-Tensorflow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/sliding_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/sliding_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ConvLSTM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ConvLSTM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/sliding_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/sliding_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvLstm-keras-2-modal-data-Copy1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ConvLstm-keras-2-modal-data-Copy1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvLstm-keras-2-modal-data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ConvLstm-keras-2-modal-data.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,16 +19,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ConvLSTM$FrameWise_ConvLstm_Tensorflow.coverage" NAME="FrameWise-ConvLstm-Tensorflow Coverage Results" MODIFIED="1532030890163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/ConvLstm$SampleWise_ConvLstm_Tensorflow.coverage" NAME="SampleWise-ConvLstm-Tensorflow Coverage Results" MODIFIED="1532055353221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
+    <SUITE FILE_PATH="coverage/ConvLstm$ConvLSTM.coverage" NAME="ConvLSTM Coverage Results" MODIFIED="1532089535495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ConvLSTM$SampleWise_ConvLstm_Tensorflow.coverage" NAME="SampleWise-ConvLstm-Tensorflow Coverage Results" MODIFIED="1532037160655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
+    <SUITE FILE_PATH="coverage/ConvLSTM$FrameWise_ConvLstm_Tensorflow.coverage" NAME="FrameWise-ConvLstm-Tensorflow Coverage Results" MODIFIED="1532030890163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SampleWise-ConvLstm-Tensorflow.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SampleWise-ConvLstm-Tensorflow.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="148" column="7" lean-forward="true" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
+            <state relative-caret-position="2096">
+              <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -39,86 +38,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
+      <file leaf-file-name="ConvLstm-keras-2-modal-data.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ConvLstm-keras-2-modal-data.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recurrent.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/keras/layers/recurrent.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="199">
-              <caret line="3391" selection-start-line="3391" selection-end-line="3391" />
+              <caret line="1956" column="6" selection-start-line="1956" selection-start-column="6" selection-end-line="1956" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gen_math_ops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_math_ops.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="4278" selection-start-line="4278" selection-end-line="4278" />
+      <file leaf-file-name="ConvLstm-keras-2-modal-data-Copy1.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ConvLstm-keras-2-modal-data-Copy1.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="math_ops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py">
+      <file leaf-file-name="sliding_window.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Codes/sliding_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="2121" selection-start-line="2121" selection-end-line="2121" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="array_ops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="1091" selection-start-line="1091" selection-end-line="1091" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pydev_run_in_console.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_run_in_console.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="1229" selection-start-line="1229" selection-end-line="1229" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lstm_net.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Codes/lstm_net.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Codes/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="94">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -157,6 +108,8 @@
         <option value="$PROJECT_DIR$/Codes/lstm_net.py" />
         <option value="$PROJECT_DIR$/Codes/utils.py" />
         <option value="$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py" />
+        <option value="$PROJECT_DIR$/Codes/sliding_window.py" />
+        <option value="$PROJECT_DIR$/ConvLstm-keras-2-modal-data.ipynb" />
       </list>
     </option>
   </component>
@@ -169,11 +122,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="182" />
-    <option name="y" value="23" />
-    <option name="width" value="1238" />
-    <option name="height" value="777" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="width" value="1931" />
+    <option name="height" value="1033" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -184,12 +136,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="ConvLSTM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ConvLSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="ConvLstm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvLstm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ConvLSTM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ConvLSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="ConvLstm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvLstm" type="462c0819:PsiDirectoryNode" />
               <item name="Codes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -204,7 +156,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -228,7 +180,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SampleWise-ConvLstm-Tensorflow">
+  <component name="RunManager" selected="Jupyter Notebook.ConvLSTM">
+    <configuration name="ConvLSTM" type="JupiterNotebook" factoryName="Jupyter Notebook">
+      <module name="ConvLSTM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+    </configuration>
     <configuration name="FrameWise-ConvLstm-Tensorflow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ConvLSTM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,6 +223,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="=c:     c\&quot;" value="" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codes" />
@@ -309,6 +279,7 @@
       <item itemvalue="Python.FrameWise-ConvLstm-Tensorflow" />
       <item itemvalue="Python.sliding_window" />
       <item itemvalue="Python.SampleWise-ConvLstm-Tensorflow" />
+      <item itemvalue="Jupyter Notebook.ConvLSTM" />
     </list>
     <recent_temporary>
       <list>
@@ -341,31 +312,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="23" width="1238" height="777" extended-state="6" />
+    <frame x="-9" y="0" width="1931" height="1033" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32916668" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="430" height="857" id="Documentation" order="2" sideWeight="0.50274724" side_tool="true" visible="true" weight="0.26086956" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5024051" side_tool="true" weight="0.29642057" />
+      <window_info anchor="right" x="0" y="0" width="432" height="833" id="Documentation" order="6" sideWeight="0.507438" side_tool="true" visible="true" weight="0.28380546" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.46470588" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32916668" />
-      <window_info anchor="bottom" id="Python Console" order="5" weight="0.35833332" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32916668" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20234114" />
+      <window_info anchor="bottom" id="Python Console" order="5" sideWeight="0.49759486" weight="0.36465323" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.30201343" />
+      <window_info anchor="right" id="Kite" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4991772" weight="0.32662192" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14591128" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="right" id="SciView" order="1" sideWeight="0.49725273" visible="true" weight="0.26086956" />
+      <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="right" id="SciView" order="2" sideWeight="0.492562" weight="0.28166756" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39932886" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,40 +359,117 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/sliding_window.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/eager/execute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="1968">
+          <caret line="95" column="11" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/FrameWise-ConvLstm-Tensorflow.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/ops/gen_array_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="269736">
+          <caret line="11239" selection-start-line="11239" selection-end-line="11239" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/lstm_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#1093#1708#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3813">
+          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/.ipynb_checkpoints/FrameWise-ConvLstm-TensorFlow-checkpoint.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
+    <entry file="file://$PROJECT_DIR$/Codes/lstm_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Codes/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#1093#1708#1" />
+          </folding>
+        </state>
+      </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4216">
+          <caret line="148" column="7" lean-forward="true" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_run_in_console.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1302">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/lstm_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1488">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#1093#1708#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils2/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/code/sliding_window.py" />
+    <entry file="file://$PROJECT_DIR$/code/FrameWise-ConvLstm-Tensorflow.py" />
+    <entry file="file://$PROJECT_DIR$/code/.ipynb_checkpoints/FrameWise-ConvLstm-TensorFlow-checkpoint.ipynb" />
+    <entry file="file://$PROJECT_DIR$/code/__init__.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_import_hook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -428,16 +477,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/FrameWise-ConvLstm-Tensorflow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" selection-end-line="112" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/code/FrameWise-ConvLstm-Tensorflow.py" />
     <entry file="file://$PROJECT_DIR$/Codes/.ipynb_checkpoints/FrameWise-ConvLstm-TensorFlow-checkpoint.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -459,113 +499,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Codes/samplewise-Tensorflow.py">
+    <entry file="file://$PROJECT_DIR$/Codes/samplewise-Tensorflow.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/eager/execute.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/IPython/core/interactiveshell.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_math_ops.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py" />
+    <entry file="file://$PROJECT_DIR$/Codes/lstm_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-          <folding>
-            <element signature="e#1#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Codes/sliding_window.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/keras/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Codes/lstm_net.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_run_in_console.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
+        <state relative-caret-position="1008">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/ops/array_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1015" selection-start-line="1015" selection-end-line="1015" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/framework/op_def_library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="786" selection-start-line="786" selection-end-line="786" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/ops/gen_array_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22444">
+          <caret line="11239" selection-start-line="11239" selection-end-line="11239" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/IPython/core/interactiveshell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="2962" selection-start-line="2962" selection-end-line="2962" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Codes/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="145">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#1093#1708#1" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/eager/execute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="1229" selection-start-line="1229" selection-end-line="1229" />
+        <state relative-caret-position="27">
+          <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="1334" selection-start-line="1334" selection-end-line="1334" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="162">
           <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/eager/execute.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="185">
+          <caret line="1739" selection-start-line="1739" selection-end-line="1739" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/IPython/core/interactiveshell.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/ops/math_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="566" selection-start-line="566" selection-end-line="566" />
+        <state relative-caret-position="146">
+          <caret line="1390" column="31" lean-forward="true" selection-start-line="1390" selection-start-column="31" selection-end-line="1390" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_run_in_console.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="1091" selection-start-line="1091" selection-end-line="1091" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="3391" selection-start-line="3391" selection-end-line="3391" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_math_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="4278" selection-start-line="4278" selection-end-line="4278" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="2121" selection-start-line="2121" selection-end-line="2121" />
+        <state relative-caret-position="402">
+          <caret line="1872" column="39" selection-start-line="1872" selection-start-column="33" selection-end-line="1872" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="408">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/41762/GitHub/ConvLstm">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="580.0" y="242.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Codes/SampleWise-ConvLstm-Tensorflow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="148" column="7" lean-forward="true" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
+        <state relative-caret-position="2096">
+          <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConvLstm-keras-2-modal-data-Copy1.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/sliding_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/keras/layers/recurrent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="1956" column="6" selection-start-line="1956" selection-start-column="6" selection-end-line="1956" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConvLstm-keras-2-modal-data.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="30" />
         </state>
       </provider>
     </entry>
