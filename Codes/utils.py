@@ -1,5 +1,10 @@
 import tensorflow as tf
+from keras.utils import to_categorical
 import numpy as np
+
+
+def one_hot_encoder(y,num_classes):
+    return to_categorical((y,num_classes))
 
 
 def conv2d(x, W):

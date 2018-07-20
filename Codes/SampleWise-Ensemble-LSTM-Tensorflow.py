@@ -5,9 +5,8 @@ import numpy as np
 
 
 from Codes.sliding_window import sliding_window
-# from Codes.utils import  mini_batch,one_hot_encoder
+from Codes.utils import  mini_batch,one_hot_encoder
 
-from keras.utils import to_categorical
 import tensorflow as tf
 from tensorflow.contrib import rnn
 from tensorflow.python.framework import ops
@@ -55,8 +54,8 @@ print("===" * 20)
 
 
 print("--- Changing targets shape... (One-Hot Encoder for cross-entropy loss ) ")
-y_train_1hot = to_categorical(y_train, num_classes=num_classes)
-y_test_1hot = to_categorical(y_test, num_classes=num_classes)
+y_train_1hot = one_hot_encoder(y_train, num_classes=num_classes)
+y_test_1hot = one_hot_encoder(y_test, num_classes=num_classes)
 print("Before transforming: y_train shape {0}, y_test shape {2} \nAfter transforming: y_train_1hot shape {1},y_test_1hot shape {3}".format(
     y_train.shape, y_train_1hot.shape, y_test.shape, y_test_1hot.shape))
 
@@ -77,18 +76,13 @@ y_test_1hot = sliding_window(y_test_1hot,WINDOW_LENGTH,WINDOW_STEP)
 
 print("Start Training......")
 
+
+hm_epochs = 1
 rnn_size = 256
 n_classes = y_train_1hot.shape[2]
+keep_rate = 0.5
+dim = len(X_train[0])
 
-
-# 定义一层 LSTM_cell，只需要说明 hidden_size, 它会自动匹配输入的 X 的维度
-def lstm_cell():
-    lstm_cell = rnn.DropoutWrapper(cell=rnn.BasicLSTMCell(rnn_size),
-                               input_keep_prob=1,
-                               output_keep_prob=keep_prob,
-                               state_keep_prob=keep_prob
-                               )
-    return lstm_cell
 
 def lstm_net(x):
     '''
@@ -98,17 +92,19 @@ def lstm_net(x):
     :param n_classes:
     :return:
     '''
-    # weights = {'weights': tf.Variable(tf.random_normal([WINDOW_LENGTH,rnn_size,n_classes]))
-    #
-    # }
-    # biases = {'biases':tf.Variable(tf.random_normal([n_classes]))
-    #
-    # }
+    weights = {'weights': tf.Variable(tf.random_normal([WINDOW_LENGTH,rnn_size,n_classes]))
+
+    }
+    biases = {'biases':tf.Variable(tf.random_normal([n_classes]))
+
+    }
 
     inputs = tf.unstack(x,x.shape[1],1)
-    stacked_lstm = rnn.MultiRNNCell(cells=[lstm_cell() for _ in range(num_layers)])    outputs, states = rnn.static_rnn(lstm_cell, inputs=inputs ,dtype=tf.float32 )
+    lstm_cell = rnn.BasicLSTMCell(rnn_size)
 
-    # output = tf.matmul(outputs,weights['weights']) + biases['biases']
+    outputs, states = rnn.static_rnn(lstm_cell, inputs=inputs,dtype=tf.float32 )
+
+    output = tf.matmul(outputs,weights['weights']) + biases['biases']
     # output = tf.transpose(output,(1,0,2))
     return output
 
@@ -131,8 +127,8 @@ def train_network(X_train,y_train,X_valid,y_valid,learning_rate = 0.001,num_epoc
     num_classes = y_train_1hot.shape[2]
 
     # Create placeholders for X,y and keep_prob
-    x = tf.placeholder(dtype=tf.float32, shape=[None, win_len, dim])
-    y = tf.placeholder(dtype=tf.float32, shape=[None, win_len,num_classes])
+    x = tf.placeholder(dtype=tf.float32, shape=[None, None, dim])
+    y = tf.placeholder(dtype=tf.float32, shape=[None, None,num_classes])
     dropout_keep_prob = tf.placeholder(dtype=tf.float32, shape=[])
 
     # states = tf.placeholder(dtype=tf.float32,[num])
